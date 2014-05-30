@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.mundoj.spider</groupId>
+	<artifactId>Spider</artifactId>
+	<packaging>war</packaging>
+	<version>1</version>
+	<name>Criando um web spider com Apache HttpComponents + JAX-RS + Jersey/Jackson</name>
+
+	<!-- PROPERTIES -->
+	<properties>
+		<httpclient.version>4.2.1</httpclient.version>
+		<jersey.version>1.8</jersey.version>
+		<junit.version>4.11</junit.version>
+		<commonslogging.version>1.1.1</commonslogging.version>
+		<commonscodec.version>1.6</commonscodec.version>
+		<servlet.jsp.version>2.2</servlet.jsp.version>
+		<servlet.version>2.5</servlet.version>
+		<servlet.jstl.version>1.2</servlet.jstl.version>
+	</properties>
+
+	<!-- DEVELOPERS -->
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>Rodrigo Ribeiro</name>
+			<email>rdccr05@gmail.com</email>
+			<url>https://github.com/rdccr</url>
+		</developer>
+		<developer>
+			<id>2</id>
+			<name>Luderson Costa</name>
+			<email>luderson.costa@gmail.com</email>
+		</developer>
+	</developers>
+
+	<!-- DEPENDENCIES -->
+	<dependencies>
+
+		<!-- APACHE HTTP CLIENT -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-cache</artifactId>
+			<version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>fluent-hc</artifactId>
+			<version>${httpclient.version}</version>
+		</dependency>
+
+		<!-- COMMONS CODEC/LOGGING -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commonscodec.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commonslogging.version}</version>
+		</dependency>
+
+		<!-- JAX-RS/JERSEY/JACKSON -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- JUNIT -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+		<!-- SERVLET -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${servlet.jsp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${servlet.jstl.version}</version>
+		</dependency>
+	</dependencies>
+
+	<!-- BUILD -->
+	<build>
+		<finalName>Spider</finalName>
+	</build>
+
+</project>
